@@ -17,7 +17,7 @@ class Users {
         }
     }
     get(id) {
-        return this.userList.find(user => user.id === id) || null;
+        return this.userList.find(user => user.id === id) ?? null;
     }
     sorted(sortType = 'up') {
         if (sortType === 'up') {

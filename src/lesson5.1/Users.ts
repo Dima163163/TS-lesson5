@@ -23,7 +23,7 @@ export abstract class Users <T extends User> {
   }
 
   get(id: number): T | null {
-    return this.userList.find(user => user.id === id) || null;
+    return this.userList.find(user => user.id === id) ?? null;
   }
 
   sorted(sortType: string = 'up'): T[] {
