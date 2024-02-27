@@ -21,30 +21,10 @@ class Users {
     }
     sorted(sortType = 'up') {
         if (sortType === 'up') {
-            return this.userList.sort((a, b) => {
-                if (a.firstname > b.firstname) {
-                    return 1;
-                }
-                else if (a.firstname < b.firstname) {
-                    return -1;
-                }
-                else {
-                    return 0;
-                }
-            });
+            return this.userList.sort((a, b) => a.firstname > b.firstname ? 1 : -1);
         }
         else {
-            return this.userList.sort((a, b) => {
-                if (a.firstname > b.firstname) {
-                    return -1;
-                }
-                else if (a.firstname < b.firstname) {
-                    return 1;
-                }
-                else {
-                    return 0;
-                }
-            });
+            return this.userList.sort((a, b) => a.firstname > b.firstname ? -1 : 1);
         }
     }
 }
